@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -7,13 +8,7 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            return true;
-        }
-
-        public bool CharacterIsNotALetter(char x)
-        {
-            
-            return true;
+            return Char.IsLetter(c);
         }
             
         public bool CountOfElementsIsEven(string[] vals)
@@ -32,7 +27,53 @@ namespace ChallengesWithTestsMark8
             return num % 2 != 0;
         }
            
+        public double SumOfMinAndMax(IEnumerable<double> numbers)
+        {
+            
+            if (numbers == null) 
+            {
+                return 0;
+            }
+            if (numbers.Count() == 0)
+            {
+                return 0;
+            }
+            return numbers.Min() + numbers.Max();
+        }
 
+        public int GetLengthOfShortestString(string str1, string str2)
+        {
+            if (str1.Length > str2.Length)
+            {
+                return str2.Length;
+            }
+            return str1.Length;
+        }
+
+        public int Sum(int[] numbers)
+        {
+            return numbers.Sum();
+        }
+            
+            
+             
+
+
+        public int SumEvens(int[] numbers)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsSumOdd(List<int> numbers)
+        {
+            throw new NotImplementedException();
+        }
+
+        public long CountOfPositiveOddsBelowNumber(long number)
+        {
+            throw new NotImplementedException();
+        }
+        
 
 
 
@@ -50,36 +91,7 @@ namespace ChallengesWithTestsMark8
             
 
 
-        public double SumOfMinAndMax(IEnumerable<double> numbers)
-        {
-            throw new NotImplementedException();
-        }
 
-        public int GetLengthOfShortestString(string str1, string str2)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Sum(int[] numbers)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int SumEvens(int[] numbers)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool IsSumOdd(List<int> numbers)
-        {
-            throw new NotImplementedException();
-        }
-
-        public long CountOfPositiveOddsBelowNumber(long number)
-        {
-            throw new NotImplementedException();
-        }
-        
 
 
     }
