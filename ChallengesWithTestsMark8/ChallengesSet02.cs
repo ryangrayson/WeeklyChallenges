@@ -104,31 +104,23 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            var odds = new List<long>();
-            for (int i = 0; i <= number && i > 0; i++)
+            
+            List<long> odds = new List<long>();
+
+            for (long i = number - 1; i > 0; i--)
             {
-              odds.Add(i);
+                if (i % 2 != 0)
+                {
+                    odds.Add(i);
+                }
             }
             return odds.Count();
         }
-
-            
-                
-                
-                
-        
-
-            
-
+                    
             
 
 
 
-                
-
-                
-           
-             
 
 
 
@@ -146,14 +138,30 @@ namespace ChallengesWithTestsMark8
 
 
 
-           
 
 
 
 
 
-          
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
