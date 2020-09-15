@@ -7,8 +7,19 @@ namespace ChallengesWithTestsMark8
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < vals.Length; i++)
+            {
+                foreach (var item in vals)
+                {
+                    if (item == false)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
+                   
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
