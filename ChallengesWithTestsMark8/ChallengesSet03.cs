@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace ChallengesWithTestsMark8
@@ -18,28 +19,55 @@ namespace ChallengesWithTestsMark8
                 }
             }
             return false;
+
+            // var cont = vals.Where(x => x.Equals(false));
         }
-                   
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+            var sumOdds = numbers.Where(x => (x % 2) != 0).Sum();
+            if (sumOdds % 2 == 0)
+            {
+                return false;
+            }
+            return true;
         }
+
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
+            password.Where(char.IsUpper).Where(char.IsLower).Where(char.IsDigit);
+            //for (var i = 0; i < password.Length; i++)
+            //{
+            //    if ()
+            //    {
+
+            //    }
+            //}
+
+            //password
             throw new NotImplementedException();
+
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+           var vals = val.ToArray();
+           return vals[0];
         }
+                   
 
         public char GetLastLetterOfString(string val)
         {
             throw new NotImplementedException();
         }
+
+
+
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
