@@ -19,9 +19,9 @@ namespace ChallengesWithTestsMark8
                 }
             }
             return false;
-
-            // var cont = vals.Where(x => x.Equals(false));
         }
+
+           
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
@@ -43,19 +43,25 @@ namespace ChallengesWithTestsMark8
             throw new NotImplementedException();
         }
 
+
+
+
+
         public char GetFirstLetterOfString(string val)
         {
            var vals = val.ToArray();
            return vals[0];
         }
-                   
+
 
         public char GetLastLetterOfString(string val)
         {
-            var vals = val.ToArray();
-            var last = vals.Length - 1;
-            return (char)last;
+            char vals = val.Last();
+            return vals;
         }
+            
+            
+           
 
 
         public decimal Divide(decimal dividend, decimal divisor)
@@ -94,11 +100,10 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-           // foreach (var item in words)
-          //  {
-                //item.ToArray().ToUpper
-                    throw new NotImplementedException();
-           // }
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].ToUpper();
+            }
         }
     }
 }
