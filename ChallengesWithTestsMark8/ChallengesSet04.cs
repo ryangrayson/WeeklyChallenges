@@ -13,7 +13,9 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            string[] strings = new string[] { str1, str2, str3, str4 };
+            var shortestString = strings.OrderBy(x => x.Length).FirstOrDefault();
+            return shortestString.Length;
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
@@ -29,17 +31,47 @@ namespace ChallengesWithTestsMark8
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
+            if (sideLength1 + sideLength2 <= sideLength3 || sideLength1 + sideLength3 <= sideLength2 || sideLength2 + sideLength3 <= sideLength1)
+            {
+                return false;
+            }
+            return true;
         }
+           
+
+
+
 
         public bool IsStringANumber(string input)
         {
             throw new NotImplementedException();
         }
 
+
+
+
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            var nullz = new List<object>();
+            var notNullz = new List<object>();
+
+            foreach (var item in objs)
+            {
+                if (item == null)
+                {
+                    nullz.Add(item);
+                }
+                else if (item != null)
+                {
+                    notNullz.Add(item);
+                }
+            }
+
+            if (nullz.Count > notNullz.Count)
+            {
+                return true;
+            }
+            return false;
         }
 
         public double AverageEvens(int[] numbers)
@@ -64,7 +96,10 @@ namespace ChallengesWithTestsMark8
             {
                 return 1;
             }
-
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             while (number != 1)
             {
                 res = res * number;
@@ -72,5 +107,7 @@ namespace ChallengesWithTestsMark8
             }
             return res;
         }
+
+
     }
 }
