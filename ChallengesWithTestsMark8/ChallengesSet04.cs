@@ -85,7 +85,19 @@ namespace ChallengesWithTestsMark8
 
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            if (input == null || input.Length == 0)
+            {
+                return false;
+            }
+            if (input.Contains("."))
+            {
+                return true;
+            }
+            if (input.Contains("-"))
+            {
+                return true;
+            }
+            return input.All(Char.IsDigit);
         }
 
 
