@@ -61,9 +61,9 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
-
+            biz.Name = "TrueCoders";
         }
+
 
 
         //---------------------------------------------------------------------//
