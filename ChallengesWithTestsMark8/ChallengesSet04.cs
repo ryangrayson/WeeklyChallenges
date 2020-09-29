@@ -8,16 +8,24 @@ namespace ChallengesWithTestsMark8
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            //for (int i = 0; i < numbers.Length; i++)
-            //{
-            //    if (numbers ==  null)
-            //    {
-            //        return 0;
-            //    }
-                throw new NotImplementedException();
+            
+            var odds = new List<int>();
+            var evens = new List<int>();
 
-            //}
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 != 0)
+                {
+                    odds.Add(numbers[i]);
+                }
+                else if (numbers[i] % 2 == 0)
+                {
+                    evens.Add(numbers[i]);
+                }
+            }
+            return odds.Sum() * (-1) + evens.Sum();
         }
+
 
 
 
