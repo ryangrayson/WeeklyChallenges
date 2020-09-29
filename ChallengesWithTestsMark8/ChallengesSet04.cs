@@ -76,18 +76,19 @@ namespace ChallengesWithTestsMark8
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            var evens = new List<int>();
 
-            //var evens = new List<int>();
-
-            //for (int i = 0; i < numbers.Length; i++)
-            //{
-            //    if (numbers[i] % 2 == 0)
-            //    {
-            //        evens.Add[i]
-            //    }
-            //}
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    evens.Add(numbers[i]);
+                }
+            }
+            return evens.Average();
         }
+
+
 
         public int Factorial(int number)
         {
