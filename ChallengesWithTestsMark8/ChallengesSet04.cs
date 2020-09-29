@@ -8,8 +8,23 @@ namespace ChallengesWithTestsMark8
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            throw new NotImplementedException();
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers ==  null)
+            //    {
+            //        return 0;
+            //    }
+                throw new NotImplementedException();
+
+            //}
         }
+
+
+
+        //---------------------------------------------------------------------//
+
+
+
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
@@ -18,16 +33,33 @@ namespace ChallengesWithTestsMark8
             return shortestString.Length;
         }
 
+
+
+        //---------------------------------------------------------------------//
+
+
+
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
             int [] array = new int[] { number1, number2, number3, number4 };
             return array.Min();
         }
 
+
+
+        //---------------------------------------------------------------------//
+
+
+
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
             throw new NotImplementedException();
+
         }
+
+
+        //---------------------------------------------------------------------//
+
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
@@ -37,8 +69,9 @@ namespace ChallengesWithTestsMark8
             }
             return true;
         }
-           
 
+
+        //---------------------------------------------------------------------//
 
 
 
@@ -47,6 +80,9 @@ namespace ChallengesWithTestsMark8
             throw new NotImplementedException();
         }
 
+
+
+        //---------------------------------------------------------------------//
 
 
 
@@ -74,10 +110,20 @@ namespace ChallengesWithTestsMark8
             return false;
         }
 
+
+
+        //---------------------------------------------------------------------//
+
+
+
         public double AverageEvens(int[] numbers)
         {
             var evens = new List<int>();
 
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
             for (int i = 0; i < numbers.Length; i++)
             {
                 if (numbers[i] % 2 == 0)
@@ -85,8 +131,16 @@ namespace ChallengesWithTestsMark8
                     evens.Add(numbers[i]);
                 }
             }
+            if (evens.Count == 0)
+            {
+                return 0;
+            }
             return evens.Average();
         }
+
+
+
+        //---------------------------------------------------------------------//
 
 
 
@@ -108,6 +162,7 @@ namespace ChallengesWithTestsMark8
             }
             return res;
         }
+
 
 
     }
