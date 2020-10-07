@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -12,13 +13,33 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-            throw new NotImplementedException();
+           
         }
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+
+            if (numbers.Length == 0)
+            {
+                return false;
+            }
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i-1] > numbers[i])
+                {
+                    return false;
+                }
+            }
+            return true;
         }
+              
+
+
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
