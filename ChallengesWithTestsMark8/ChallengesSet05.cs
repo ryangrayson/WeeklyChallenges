@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace ChallengesWithTestsMark8
 {
@@ -13,8 +14,18 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
         {
-           
+            throw new NotImplementedException();
+
+
+
         }
+
+
+
+        //------------------------------------------------------------------------------//
+
+
+
 
         public bool IsAscendingOrder(int[] numbers)
         {
@@ -37,6 +48,10 @@ namespace ChallengesWithTestsMark8
             }
             return true;
         }
+
+
+
+        //-----------------------------------------------------------------------//
               
 
 
@@ -48,7 +63,8 @@ namespace ChallengesWithTestsMark8
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            var newString = string.Join(" ", words);
+            return newString;
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
